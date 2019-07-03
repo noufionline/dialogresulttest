@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="DialogResultTest.Views.ViewA"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True" Height="350" Width="525">
+    <prism:Dialog.WindowStyle>
+        <Style TargetType="{x:Type Window}">
+            <Setter Property="SizeToContent" Value="WidthAndHeight"/>
+            <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterScreen"/>
+        </Style>
+    </prism:Dialog.WindowStyle>
+    <Grid>
+            <TextBlock FontSize="25"> View A</TextBlock>
+        <Button Command="{Binding CloseCommand}" 
+                Content="Close from ViewModel"
+                HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+    </Grid>
+</UserControl>
